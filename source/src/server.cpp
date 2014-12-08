@@ -1527,8 +1527,11 @@ void serverdamage(client *target, client *actor, int damage, int gun, bool gib, 
         // ts.respawn();
         
         /* Signal this kill to squarestats */
-        on_event_kill(actor->name.c_str(), target->name.c_str(),
-                      guns[gun].modelname.c_str(), gamemillis,
+        /* It turns out that in this file, "string" does not refer to std::string,
+         * but is infact typedef'd to char[260], hence we pass a pointer of the 
+         * string instead of calling .c_str() for player/gun names. */
+        on_event_kill(&(actor->name[0]), &(target->name[0]),
+                      &(guns[gun].modelname[0]), gamemillis,
                       gib ? 1 : 0,
                       suic ? 1 : 0
         );
