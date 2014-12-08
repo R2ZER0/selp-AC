@@ -10,6 +10,9 @@
 #include "serverfiles.h"
 // 2011feb05:ft: quitproc
 #include "signal.h"
+
+#include "squarestats_server_event.h"
+
 // config
 servercontroller *svcctrl = NULL;
 servercommandline scl;
@@ -1522,6 +1525,13 @@ void serverdamage(client *target, client *actor, int damage, int gun, bool gib, 
         }
         // don't issue respawn yet until DEATHMILLIS has elapsed
         // ts.respawn();
+        
+        /* Signal this kill to squarestats */
+        on_event_kill(actor->name.c_str(), target->name.c_str(),
+                      guns[gun].modelname.c_str(), gamemillis,
+                      gib ? 1 : 0,
+                      suic ? 1 : 0
+        );
 
         if(isdedicated && actor->type == ST_TCPIP && tk)
         {
