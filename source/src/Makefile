@@ -101,6 +101,7 @@ SERVER_OBJS= \
 	tools-standalone.o \
 	wizard-standalone.o \
 	squarestats_server_event.o \
+	squarestats_event_json.o \
 	cJSON.o
 MASTER_OBJS= \
 	crypto-standalone.o \
