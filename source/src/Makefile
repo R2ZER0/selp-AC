@@ -1,5 +1,5 @@
 CXXFLAGS= -O3 -fomit-frame-pointer
-CXX=g++	# Use clang++, as g++ optimizations cause crashes...
+CXX=clang++	# Use clang++, as g++ optimizations cause crashes...
 override CXXFLAGS+= -Wall -fsigned-char
 
 PLATFORM= $(shell uname -s)
