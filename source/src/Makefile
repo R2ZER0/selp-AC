@@ -1,5 +1,5 @@
 CXXFLAGS= -O3 -fomit-frame-pointer
-CXX=clang++	# Use clang++, as g++ optimizations cause crashes...
+CXX=g++	# Use clang++, as g++ optimizations cause crashes...
 override CXXFLAGS+= -Wall -fsigned-char
 
 PLATFORM= $(shell uname -s)
@@ -99,7 +99,9 @@ SERVER_OBJS= \
 	server-standalone.o \
 	stream-standalone.o \
 	tools-standalone.o \
-	wizard-standalone.o
+	wizard-standalone.o \
+	squarestats_server_event.o \
+	cJSON.o
 MASTER_OBJS= \
 	crypto-standalone.o \
 	stream-standalone.o \
