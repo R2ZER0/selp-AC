@@ -17,12 +17,12 @@ void ck_json_item_string(cJSON* obj, const char* item, const char* str)
         ck_assert_str_eq(str, jitem->valuestring);
 }
 
-void ck_json_item_double(cJSON* obj, const char* item, double num)
+void ck_json_item_int(cJSON* obj, const char* item, int num)
 {
         cJSON* jitem = cJSON_GetObjectItem(obj, item);
         ck_assert(jitem != NULL);
         ck_assert(jitem->type == cJSON_Number);
-        ck_assert(num == jitem->valuedouble);
+        ck_assert_int_eq(num, jitem->valueint);
 }
 
 void ck_json_item_true(cJSON* obj, const char* item)
@@ -56,7 +56,7 @@ START_TEST(test_frag)
         ck_json_item_string(obj, "killer", "k1ll3r");
         ck_json_item_string(obj, "victim", "v!icTim");
         ck_json_item_string(obj, "weapon", "shotgun");
-        ck_json_item_double(obj, "time", 12.345);
+        ck_json_item_int(obj, "time", 12345);
         ck_json_item_false(obj, "gib");
         ck_json_item_false(obj, "suicide");
         

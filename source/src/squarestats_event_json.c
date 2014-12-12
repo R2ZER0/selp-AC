@@ -13,7 +13,7 @@ const char* event_kill_json(const char* killer, const char* victim,
         cJSON_AddStringToObject(root, "victim", victim);
         cJSON_AddStringToObject(root, "weapon", weapon);
         /* We recieve the time in milliseconds */
-        cJSON_AddNumberToObject(root, "time", ((double) time / 1000.0));
+        cJSON_AddNumberToObject(root, "time", (double)time);
         cJSON_AddBoolToObject(root, "gib", gib);
         cJSON_AddBoolToObject(root, "suicide", suicide);
         
