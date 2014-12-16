@@ -1,4 +1,4 @@
-/* squarestats_event_json.h */
+/* event_json.h */
 #ifndef _SQUARESTATS_EVENT_JSON_H_
 #define _SQUARESTATS_EVENT_JSON_H_
 

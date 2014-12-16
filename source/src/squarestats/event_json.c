@@ -1,4 +1,4 @@
-/* squarestats_event_json.c */
+/* event_json.c */
 
 #include <stdlib.h>
 #include "cJSON.h"

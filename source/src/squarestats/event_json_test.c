@@ -1,9 +1,9 @@
-/* squarestats_event_json_test.c */
+/* event_json_test.c */
 
 #include <stdlib.h>
 #include <check.h>
 #include "cJSON.h"
-#include "squarestats_event_json.h"
+#include "event_json.h"
 
 /*******************************************************************************
  * JSON-checking utility functions

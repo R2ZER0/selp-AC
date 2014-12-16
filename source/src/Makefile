@@ -100,9 +100,9 @@ SERVER_OBJS= \
 	stream-standalone.o \
 	tools-standalone.o \
 	wizard-standalone.o \
-	squarestats_server_event.o \
-	squarestats_event_json.o \
-	cJSON.o
+	squarestats/server_event.o \
+	squarestats/event_json.o \
+	squarestats/cJSON.o
 MASTER_OBJS= \
 	crypto-standalone.o \
 	stream-standalone.o \

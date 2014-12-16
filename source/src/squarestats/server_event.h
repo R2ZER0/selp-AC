@@ -1,4 +1,4 @@
-/* squarestats_server_event.h */
+/* server_event.h */
 #ifndef _SQUARESTATS_SERVER_EVENT_H_
 #define _SQUARESTATS_SERVER_EVENT_H_
 

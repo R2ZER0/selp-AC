@@ -11,7 +11,7 @@
 // 2011feb05:ft: quitproc
 #include "signal.h"
 
-#include "squarestats_server_event.h"
+#include "squarestats/server_event.h"
 
 // config
 servercontroller *svcctrl = NULL;

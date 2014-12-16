@@ -1,8 +1,8 @@
-/* squarestats_server_event.c */
+/* server_event.c */
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "squarestats_event_json.h"
+#include "event_json.h"
 
 /* Called when a player kills another (or themselves). */
 void on_event_kill(const char* killer, const char* victim, const char* weapon,
