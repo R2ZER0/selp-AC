@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "event_json.h"
+#include "server_zmq.h"
 
 /* Called when a player kills another (or themselves). */
 void on_event_kill(const char* killer, const char* victim, const char* weapon,
@@ -11,7 +12,7 @@ void on_event_kill(const char* killer, const char* victim, const char* weapon,
         const char* json = event_kill_json(killer, victim, weapon, time, gib,
                                            suicide);
         
-        printf("%s", json);
+        send_message(json);
         
         free((void*) json);
         json = NULL;
