@@ -102,7 +102,8 @@ SERVER_OBJS= \
 	wizard-standalone.o \
 	squarestats/server_event.o \
 	squarestats/event_json.o \
-	squarestats/cJSON.o
+	squarestats/cJSON.o \
+	squarestats/server_zmq.o
 MASTER_OBJS= \
 	crypto-standalone.o \
 	stream-standalone.o \
