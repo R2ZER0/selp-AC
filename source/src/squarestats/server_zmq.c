@@ -15,6 +15,7 @@ void init_zmq(void)
 {
         context = zmq_context_new();
         pub = zmq_socket(context, ZMQ_PUB);
+        zmq_bind(pub, "tcp://*:28765");
         atexit(deinit_zmq);
 }
 
