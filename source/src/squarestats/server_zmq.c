@@ -4,11 +4,11 @@
 #include <string.h>
 #include <zmq.h>
 
-void* context = NULL;
-void* pub = NULL;
-
 void init_zmq(void);
 void deinit_zmq(void);
+
+void* context = NULL;
+void* pub = NULL;
 
 /* Create our socket */
 void init_zmq(void)
@@ -27,7 +27,8 @@ void deinit_zmq(void) {
         context = NULL;
 }
 
-/* Send the given string as a simple one-part message */
+/* This file's public function:
+ * Send the given string as a simple one-part message */
 void send_message(const char* message)
 {
         if(!pub) { init_zmq(); }
